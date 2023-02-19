@@ -1,0 +1,116 @@
+site_name: "Project based K8s"
+site_description: "Hands on Kubernetes Projects"
+site_author: "Robusta.dev"
+site_url: "https://docs.robusta.dev/master/"
+
+# Copyright
+copyright: "&copy; 2023 Robusta"
+
+# Repository
+repo_name: "Project based K8s"
+repo_url: "https://github.com/robusta-dev/robusta"
+edit_uri: "https://github.com/robusta-dev/robusta/docs"
+
+# Configuration
+theme:
+  name: "material"
+  language: "en"
+  shortcuts:
+    help: 191 # ?
+    next: 78 # n
+    previous: 80 # p
+    search: 83 # s
+  palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  # features:
+  #   - navigation.tabs
+  #   - navigation.tabs.sticky
+  #   - navigation.indexes
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.indexes
+    - navigation.top
+    - navigation.pruning
+    - search.suggest
+    - search.share
+    - content.code.annotate
+    - content.code.copy
+    - header.autohide
+    - announce.dismiss
+    - toc.follow
+  #font:
+  #text: 'Ubuntu'
+  #code: 'Ubuntu Mono'
+  #icon:
+  #logo: 'images/logo.svg'
+  #favicon: 'assets/images/favicon.ico'
+
+# Extensions
+markdown_extensions:
+  - pymdownx.details
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+      separator: "_"
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+      lang:
+        - en
+
+# Customization
+extra_javascript:
+  - "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"
+# extra_css:
+#   - "assets/css/custom.css"
+extra:
+  manifest: "manifest.json"
+  social:
+    - icon: "fontawesome/brands/github-alt"
+      link: "https://github.com/robusta-dev/robusta"
+    - icon: "fontawesome/brands/twitter"
+      link: "https://twitter.com/RobustaDev"
+
+# Page tree
+nav:
+  - "🏗️Projects": 
+      - "Meme Generator": 
+        - "Local Build": "projects/meme-generator/localbuild.md"
+        - "Docker": "projects/meme-generator/docker.md"
+        - "Kubernetes": "projects/meme-generator/kubernetes.md"
+  - "🐍Python":
+      - "Flask Meme Generator": "python/python.md"
+  - "📚Reference":
+      - "Virtual Environment": "reference/virtualenv.md"
+      - "K3s Cluster": "reference/localcluster.md"
+      - "Docker Buildx": "reference/dockerbuildx.md"
