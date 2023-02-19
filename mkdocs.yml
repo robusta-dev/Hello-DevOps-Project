@@ -8,8 +8,8 @@ copyright: "&copy; 2023 Robusta"
 
 # Repository
 repo_name: "Project based K8s"
-repo_url: "https://github.com/robusta-dev/robusta"
-edit_uri: "https://github.com/robusta-dev/robusta/docs"
+repo_url: "https://github.com/robusta-dev/TestMKdocs"
+edit_uri: "https://github.com/robusta-dev/TestMKdocs/docs"
 
 # Configuration
 theme:
