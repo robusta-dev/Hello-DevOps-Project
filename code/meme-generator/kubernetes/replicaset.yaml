@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: meme-replicaset
+  labels: 
+    app: meme-app-replicaset
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: meme-app-replicaset
+  template:
+    metadata:
+      labels:
+        app: meme-app-replicaset
+    spec:
+      containers:
+        - name: meme-app
+          image: pavangudiwada/buildxtest2:latest
+          ports:
+            - containerPort: 5000
+              protocol: TCP
+          resources:
+            limits:
+              memory: "128Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: meme-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5000
+  selector:
+    app: meme-app-replicaset

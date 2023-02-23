@@ -1,5 +1,5 @@
-# Project based Kubernetes 
-Welcome!👋 Learn Kubernetes by implementing simple and fun projects
+# Project based DevOps
+Welcome!👋 Learn DevOps by implementing simple and fun projects
 
 
 ### Pavan Guidwada

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Meme Generator</title>
+</head>
+<body>
+    
+    <center>
+        <h1>Meme Generator Project</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            {% if meme_image %}
+
+            <div>
+                <img src="{{meme_image}}" style="min-width: 200px; max-width: 800px; min-height: 500px; max-height: 600px;">
+            </div>
+    
+            {% endif %}
+
+            <button type="submit" style="padding: 5px;">Generate meme</button>
+
+            {% if host_name %}
+            <div>
+                Running on <b>{{host_name}}</b> a <b>{{host_type}}</b>, <b>{{host_arch}}</b> architecture machine
+            </div>
+            {% endif %}
+        </form>
+    </center>
+
+</body>
+</html>

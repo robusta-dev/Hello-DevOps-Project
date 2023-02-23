@@ -1,4 +1,4 @@
-site_name: "Project based K8s"
+site_name: "Project based DevOps"
 site_description: "Hands on Kubernetes Projects"
 site_author: "Robusta.dev"
 site_url: "https://docs.robusta.dev/master/"
@@ -7,7 +7,7 @@ site_url: "https://docs.robusta.dev/master/"
 copyright: "&copy; 2023 Robusta"
 
 # Repository
-repo_name: "Project based K8s"
+repo_name: "Project based DevOps"
 repo_url: "https://github.com/robusta-dev/TestMKdocs"
 edit_uri: "https://github.com/robusta-dev/TestMKdocs/docs"
 
@@ -104,7 +104,8 @@ extra:
 # Page tree
 nav:
   - "🏗️Projects": 
-      - "Meme Generator": 
+      - "Meme Generator":
+        - "About": "projects/meme-generator/about.md"
         - "Local Build": "projects/meme-generator/localbuild.md"
         - "Docker": "projects/meme-generator/docker.md"
         - "Kubernetes": "projects/meme-generator/kubernetes.md"
