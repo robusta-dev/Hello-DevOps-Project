@@ -12,20 +12,18 @@
         <meta name="author" content="Robusta.dev">
       
       
-        <link rel="canonical" href="https://docs.robusta.dev/master/projects/meme-generator/localbuild/">
+        <link rel="canonical" href="https://docs.robusta.dev/master/projects/meme-generator/about/">
       
       
-        <link rel="prev" href="../about/">
       
-      
-        <link rel="next" href="../docker/">
+        <link rel="next" href="../localbuild/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
     
     
       
-        <title>Local Build - Project based DevOps</title>
+        <title>About - Project based DevOps</title>
       
     
     
@@ -77,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#build_the_project_locally" class="md-skip">
+        <a href="#kubernetes_meme_generator" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Local Build
+              About
             
           </span>
         </div>
@@ -217,7 +215,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../about/" class="md-tabs__link md-tabs__link--active">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         🏗️Projects
       </a>
     </li>
@@ -386,20 +384,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
-        About
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -412,12 +396,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Local Build
+          About
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Local Build
+        About
       </a>
       
         
@@ -436,15 +420,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setup_python" class="md-nav__link">
-    Setup python
+  <a href="#project_introduction" class="md-nav__link">
+    🏫Project Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run_the_app" class="md-nav__link">
-    Run the app
+  <a href="#what_youll_learn" class="md-nav__link">
+    🎯What you'll learn
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯What you'll learn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    🐍Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    🐳Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    ☸️Kubernetes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project_outline" class="md-nav__link">
+    🗺️Project Outline
   </a>
   
 </li>
@@ -453,6 +471,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../localbuild/" class="md-nav__link">
+        Local Build
+      </a>
     </li>
   
 
@@ -664,15 +696,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setup_python" class="md-nav__link">
-    Setup python
+  <a href="#project_introduction" class="md-nav__link">
+    🏫Project Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run_the_app" class="md-nav__link">
-    Run the app
+  <a href="#what_youll_learn" class="md-nav__link">
+    🎯What you'll learn
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯What you'll learn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    🐍Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    🐳Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    ☸️Kubernetes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project_outline" class="md-nav__link">
+    🗺️Project Outline
   </a>
   
 </li>
@@ -696,34 +762,34 @@
 
 
 
-<h1 id="build_the_project_locally">Build the project locally<a class="headerlink" href="#build_the_project_locally" title="Permanent link">&para;</a></h1>
-<p>We will use the Python project code and build the meme generator locally to understand what it does and how to run it.</p>
-<h2 id="setup_python">Setup python<a class="headerlink" href="#setup_python" title="Permanent link">&para;</a></h2>
+<h1 id="kubernetes_meme_generator">Kubernetes Meme Generator<a class="headerlink" href="#kubernetes_meme_generator" title="Permanent link">&para;</a></h1>
+<h2 id="project_introduction">🏫Project Introduction<a class="headerlink" href="#project_introduction" title="Permanent link">&para;</a></h2>
+<p>This project will help you practice the basic DevOps concepts like containerization, application distribution, Docker and Kubernetes.</p>
+<h2 id="what_youll_learn">🎯What you'll learn<a class="headerlink" href="#what_youll_learn" title="Permanent link">&para;</a></h2>
+<h3 id="python">🐍Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Setting up a project locally</li>
+</ul>
+<h3 id="docker">🐳Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Containerize the application</li>
+<li>Creating a Dockerfile</li>
+<li>Building an image</li>
+<li>Running a container</li>
+<li>Exposing ports</li>
+<li>Pushing Docker image to a public registry(DockerHub)</li>
+</ul>
+<h3 id="kubernetes">☸️Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Creating and running <strong>Pods</strong></li>
+<li>Port-forwarding</li>
+<li>Creating and using <strong>ReplicaSet</strong></li>
+<li>Creating a <strong>ClusterIP Service</strong></li>
+</ul>
+<h2 id="project_outline">🗺️Project Outline<a class="headerlink" href="#project_outline" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Download the repo, change the directory to meme generator
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>:repo
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>reponame/projects/meme-generator
-</code></pre></div></td></tr></table></div></li>
-<li>
-<p>Install python virtual environment. It lets us run install python packages without affecting our default python installation.
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">python</span> <span class="n">install</span> <span class="n">venv</span> <span class="n">venv</span> <span class="c1"># (1)</span>
-</code></pre></div></td></tr></table></div></p>
-<ol>
-<li>Learn how to use virtual environments here</li>
+<li>Build </li>
 </ol>
-</li>
-<li>
-<p>Install required packages specified in the <code>requirements.txt</code>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
-</code></pre></div></td></tr></table></div>
-</li>
-</ol>
-<h2 id="run_the_app">Run the app<a class="headerlink" href="#run_the_app" title="Permanent link">&para;</a></h2>
-<p><code>main.py</code> is our Python application, <code>templates</code> contains some HTML required for the web application. </p>
-<p>Use <code>python main.py</code> to start the application. Navigate to <a href="http://localhost:5000">http://localhost:5000</a></p>
-<p>Vola!!🎉 There we have our meme-generator running. Well, done.👏</p>
-<p>Next lets containerize the app. </p>
 
 
 
