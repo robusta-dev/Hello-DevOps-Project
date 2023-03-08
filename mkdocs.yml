@@ -51,13 +51,19 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.pruning
-    - search.suggest
+    - search.highlight
     - search.share
+    - search.suggest
     - content.code.annotate
     - content.code.copy
     - header.autohide
     - announce.dismiss
     - toc.follow
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+
   #font:
   #text: 'Ubuntu'
   #code: 'Ubuntu Mono'
@@ -86,6 +92,19 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 plugins:
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
   - search:
       separator: '[\s\-\.]+'
       lang:
@@ -108,9 +127,9 @@ extra:
 nav:
   - Home: index.md
   - "Projects": 
-      - Your First DevOps Project: 
+      - Turn An App Into A Container: 
         - projects/buildpythonlocally/introduction.md
-        - "Your First Python Project": "projects/buildpythonlocally/yourfirstproject.md"
+        - "Create the container": "projects/buildpythonlocally/yourfirstproject.md"
         # - "About": "projects/meme-generator/about.md"
         # - "Local Build": "projects/meme-generator/localbuild.md"
         # - "Docker": "projects/meme-generator/docker.md"
