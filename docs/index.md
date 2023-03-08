@@ -11,11 +11,9 @@ hide:
 
 Start with your first project 
 
-[Your First DevOps project :material-cursor-default-click:](./projects/buildpythonlocally/introduction.md){ .md-button .md-button--primary }
+[Your First Docker Container :simple-docker:](./projects/buildpythonlocally/introduction.md){ .md-button .md-button--primary }
 
-### Comming Soon
-
-[Your First Docker Container](#){ .md-button}
+### Coming Soon
 
 [Your First Kubernetes Pod](#){ .md-button }
 
