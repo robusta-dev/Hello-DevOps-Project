@@ -1,4 +1,4 @@
-site_name: "Project based DevOps"
+site_name: "Hello DevOps Project"
 site_description: "Hands on Kubernetes Projects"
 site_author: "Robusta.dev"
 site_url: "https://docs.robusta.dev/master/"
@@ -7,9 +7,9 @@ site_url: "https://docs.robusta.dev/master/"
 copyright: "&copy; 2023 Robusta"
 
 # Repository
-repo_name: "Project based DevOps"
-repo_url: "https://github.com/robusta-dev/TestMKdocs"
-edit_uri: "https://github.com/robusta-dev/TestMKdocs/docs"
+repo_name: "Hello DevOps Project"
+repo_url: "https://github.com/robusta-dev/Hello-DevOps-Project"
+edit_uri: "https://github.com/robusta-dev/Hello-DevOps-Project/tree/main/docs"
 
 # Configuration
 theme:
@@ -21,16 +21,19 @@ theme:
     previous: 80 # p
     search: 83 # s
   palette:
-
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
+      primary: indigo
+      accent: indigo
       scheme: slate
       toggle:
         icon: material/brightness-4
@@ -59,7 +62,7 @@ theme:
   #text: 'Ubuntu'
   #code: 'Ubuntu Mono'
   #icon:
-  #logo: 'images/logo.svg'
+  # logo: 'images/logo.svg'
   #favicon: 'assets/images/favicon.ico'
 
 # Extensions
@@ -103,15 +106,18 @@ extra:
 
 # Page tree
 nav:
-  - "🏗️Projects": 
-      - "Meme Generator":
-        - "About": "projects/meme-generator/about.md"
-        - "Local Build": "projects/meme-generator/localbuild.md"
-        - "Docker": "projects/meme-generator/docker.md"
-        - "Kubernetes": "projects/meme-generator/kubernetes.md"
-  - "🐍Python":
-      - "Flask Meme Generator": "python/python.md"
-  - "📚Reference":
-      - "Virtual Environment": "reference/virtualenv.md"
-      - "K3s Cluster": "reference/localcluster.md"
-      - "Docker Buildx": "reference/dockerbuildx.md"
+  - Home: index.md
+  - "Projects": 
+      - Your First DevOps Project: 
+        - projects/buildpythonlocally/introduction.md
+        - "Your First Python Project": "projects/buildpythonlocally/yourfirstproject.md"
+        # - "About": "projects/meme-generator/about.md"
+        # - "Local Build": "projects/meme-generator/localbuild.md"
+        # - "Docker": "projects/meme-generator/docker.md"
+        # - "Kubernetes": "projects/meme-generator/kubernetes.md"
+  # - "🐍Python":
+  #     - "Flask Meme Generator": "python/python.md"
+  # - "📚Reference":
+  #     - "Virtual Environment": "reference/virtualenv.md"
+  #     - "K3s Cluster": "reference/localcluster.md"
+  #     - "Docker Buildx": "reference/dockerbuildx.md"
