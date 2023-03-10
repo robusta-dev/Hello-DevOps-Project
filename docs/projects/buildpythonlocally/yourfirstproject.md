@@ -1,6 +1,19 @@
-# Create the container
+# Your First Docker Container
+In this project, we will containerize and run an application using Docker.
 
-We will use a simple Python Flask application. When run, the application gets and displays a meme from Reddit in your browser.
+## 🎯 What you'll learn
+* Writing a Dockerfile 
+* Creating your first Docker image
+
+## 🛑 Prerequisites
+* Docker installed on your machine.
+* Python and pip installed. Don't worry, you don't need to know how to code in Python. 
+
+
+## Introduction
+We will use a simple Python application as the base project and containerize it using Docker. This application gets a meme from Reddit and displays it as shown below. 
+
+![Meme Generator](./images/memegeneratorexample.png)
 
 ## Initial Setup
 
@@ -9,23 +22,43 @@ Download the repo with our code and switch to `hello-devops-project/code/meme-ge
     git clone https://github.com/robusta-dev/Hello-DevOps-Project.git
     cd hello-devops-project/code/meme-generator/
     ```
-## Run Python application locally - Optional
+## Run Python application locally
 
-Run `./buildlocally.sh` to install the required packages and run the application. Navigate to [http://localhost:5000](http://localhost:5000) to see our app exposed on port `5000`.
+Before we jump into containerizing the app, let's see how we can run it locally on your machine. This will help us understand the required steps to run a python app.
+
+The following commands, install required packages and starts the application. 
+```py linenums="1"
+pip install -r requirements.txt
+python main.py
+```
+
+Navigate to [http://localhost:5000](http://localhost:5000) on your browser to see the app exposed on port `5000`.
 
 
 ## Create the Dockerfile
 
-A **Dockerfile** contains instructions to recreate the local installation and generates a Docker image using it.
+A **Dockerfile** contains instructions to containerize an application. In this case, we will write the instructions to 
 
 To do this, we will follow these steps
 
 1. Get a Docker image with python preinstalled
-2. Copy the project code into it
-3. Install required packages
-4. Run the application when the container starts
+```yaml linenums="1"
+FROM python:3.10-slim
+```
+2. Copy the code from the directory into the Docker image.
+```yaml linenums="1"
+COPY . .
+```
+3. Install required packages using pip
+```yaml linenums="1"
+RUN pip install --no-cache-dir -r requirements.txt
+```
+4. Give the command that's needs to be run when the container is created. Here we are running `main.py` file. 
+```yaml linenums="1"
+CMD ["python", "main.py"]
+```
 
-With the instructions from the previous step, we create this Dockerfile
+This is the result of the previous steps. 
     ``` docker linenums="1" title="Dockerfile"
     FROM python:3.10-slim 
     COPY . .
@@ -34,16 +67,23 @@ With the instructions from the previous step, we create this Dockerfile
     ```
 
 ## Build the Docker image
-A Docker image is created using our `Dockerfile`, a single image can be used to create one or more containers.
+
+The main goal of using Docker is to make an app portable and reproducible. If you share just the Dockerfile, a person cannot run your application. It's just instructions and not the actual application. 
+
+This is why we need a Docker Image. It is a binary package with your app, dependencies and startup command baked into it. 
+
+Anyone can use this image to create one or more containers. You heard it right, a single image can be used to create multiple containers. 
 
 Run the following command to build the docker image
 ```yaml linenums="1"
 docker build -t python-app:v1 . # (1)!
 ```
 
-1.  `-t` - Tag your app, in this case `v1`. Create multiple versions of the same image with different tags.
+1.  ### What are these arguments for?
 
-    `.` - Build the Dockerfile in the current directory. 
+    `-t` - Used to tag the image, in this case `v1`. You can create multiple versions of the same image with different tags.
+
+    `.` - The period specifies that the Dockerfile in the current directory be used to build the image. You can also provide a path to the Dockerfile if its in a different location.
 
 ??? success "Output"
 
@@ -52,12 +92,16 @@ docker build -t python-app:v1 . # (1)!
 
 
 ## Run the container
-Let's run the image and create a container
+The image we created is stored on our system. Let's run the image and create your first container
 ```yaml linenums="1"
 docker run -p 5000:5000 python-app:v1 # (1)!
 ```
 
-1. `-p` - Specifies docker to attach a port in your container to your localhost.
+1.  What is this argument for?
+
+    `-p` - Lets you specify `PortToBeExposed:ContainerPort`, in this case `5000:5000`. 
+    
+    If you use `docker run -p 6000:5000 python-app:v1`, you will be able to access the application using [http://localhost:6000](http://localhost:6000)
 
 ??? success "Output"
 
@@ -67,6 +111,21 @@ docker run -p 5000:5000 python-app:v1 # (1)!
 
 Navigate to [http://localhost:5000](http://localhost:5000) to see the running app.
 ???+ note
-    Since we did not use the detached mode `-d`, the application ends as soon as you use `CTRL+C` or close your terminal. 
+    The application ends as soon as you use `CTRL+C` or close your terminal. If you want the application on the background use `docker run -d -p 5000:5000 python-app:v1`. 
+    
+    `-d` - This argument lets you run your container in the background.
 
-Vola!!🎉 There we have your first Docker container. Well, done.👏
+Voilà!!🎉 There we have your first Docker container. Well, done.👏
+
+## 3 Questions to check your Docker understanding
+
+1. If Dockerfile is a cake recipie, the image is a ___________.
+2. In the command `docker run -p 8000:5000, 8000` refers to  and 5000 refers to \__________. 
+3. The point of containerizing an app is ___________. 
+
+Tweet your answers and tag 
+
+## 3 Steps to master Dockerfile
+1. Redo the exercise again.
+2. Deploy a similar app using [this guide](https://docs.docker.com/language/python/build-images/) from Docker docs.
+3. 

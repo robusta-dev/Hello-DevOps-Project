@@ -9,13 +9,12 @@ hide:
 * People with theoretical DevOps knowledge
 * Beginners in DevOps
 
-Start with your first project 
+Start now!
 
-[Your First Docker Container :simple-docker:](./projects/buildpythonlocally/introduction.md){ .md-button .md-button--primary }
+[Your First Docker Container :simple-docker:](./projects/buildpythonlocally/yourfirstproject.md){ .md-button .md-button--primary }
 
 ### Coming Soon
 
 [Your First Kubernetes Pod](#){ .md-button }
-
 [Your First Kubernetes ReplicaSet](#){ .md-button }
 
