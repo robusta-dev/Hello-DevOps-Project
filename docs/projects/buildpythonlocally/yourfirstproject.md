@@ -1,13 +1,13 @@
-# Your First Docker Container
-In this project, we will containerize and run an application using Docker.
+# 🔥Your First Docker Container
+In this project, we will containerize and run an application using Docker. The main goal of using Docker is to make an app portable and reproducible.
 
 ## 🎯 What you'll learn
 * Writing a Dockerfile 
 * Creating your first Docker image
 
 ## 🛑 Prerequisites
-* Docker installed on your machine.
-* Python and pip installed. Don't worry, you don't need to know how to code in Python. 
+* [Docker](https://docs.docker.com/get-docker/) installed on your machine.
+* [Python](https://www.python.org/) and [pip](https://pip.pypa.io/en/stable/) installed. Don't worry, you don't need to know how to code in Python. 
 
 
 ## Introduction
@@ -37,7 +37,7 @@ Navigate to [http://localhost:5000](http://localhost:5000) on your browser to se
 
 ## Create the Dockerfile
 
-A **Dockerfile** contains instructions to containerize an application. In this case, we will write the instructions to 
+A **Dockerfile** contains instructions to containerize an application. In this case, we will write the instructions to build and containerize our python app. 
 
 To do this, we will follow these steps
 
@@ -46,12 +46,12 @@ To do this, we will follow these steps
 FROM python:3.10-slim
 ```
 2. Copy the code from the directory into the Docker image.
-```yaml linenums="1"
+```yaml linenums="1" 
 COPY . .
 ```
 3. Install required packages using pip
 ```yaml linenums="1"
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt 
 ```
 4. Give the command that's needs to be run when the container is created. Here we are running `main.py` file. 
 ```yaml linenums="1"
@@ -68,18 +68,16 @@ This is the result of the previous steps.
 
 ## Build the Docker image
 
-The main goal of using Docker is to make an app portable and reproducible. If you share just the Dockerfile, a person cannot run your application. It's just instructions and not the actual application. 
+A Docker image is a binary package with your app, dependencies and startup command baked into it.
 
-This is why we need a Docker Image. It is a binary package with your app, dependencies and startup command baked into it. 
-
-Anyone can use this image to create one or more containers. You heard it right, a single image can be used to create multiple containers. 
+Anyone with the Docker image can run your application without any issues.
 
 Run the following command to build the docker image
 ```yaml linenums="1"
 docker build -t python-app:v1 . # (1)!
 ```
 
-1.  ### What are these arguments for?
+1.  **What are these arguments for?**
 
     `-t` - Used to tag the image, in this case `v1`. You can create multiple versions of the same image with different tags.
 
@@ -117,15 +115,15 @@ Navigate to [http://localhost:5000](http://localhost:5000) to see the running ap
 
 Voilà!!🎉 There we have your first Docker container. Well, done.👏
 
-## 3 Questions to check your Docker understanding
+## ❓3 Questions to check your Docker understanding
 
-1. If Dockerfile is a cake recipie, the image is a ___________.
-2. In the command `docker run -p 8000:5000, 8000` refers to  and 5000 refers to \__________. 
+1. If Dockerfile is a cake recipe, the image is a ___________.
+2. In the command `docker run -p 8000:5000`, *8000 refers to ___________* and *5000 refers to ___________*. 
 3. The point of containerizing an app is ___________. 
 
-Tweet your answers and tag 
+Tweet your answers tagging @RobustaDev.  
 
-## 3 Steps to master Dockerfile
-1. Redo the exercise again.
+## 🥷3 Steps to master Dockerfile
+1. Redo the exercise.
 2. Deploy a similar app using [this guide](https://docs.docker.com/language/python/build-images/) from Docker docs.
-3. 
+3. Containerize [this](https://github.com/darkmavis1980/flask-python-3-docker) application. 

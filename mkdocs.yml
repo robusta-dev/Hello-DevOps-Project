@@ -125,10 +125,10 @@ extra:
 
 # Page tree
 nav:
-  - Home: index.md
-  - "Projects": 
+  - 🏠Home: index.md
+  - "🏗️Projects": 
         # - "Introduction": "projects/buildpythonlocally/introduction.md"
-      - "Your First Docker Container": "projects/buildpythonlocally/yourfirstproject.md"
+      - "🔥Your First Docker Container": "projects/buildpythonlocally/yourfirstproject.md"
         # - "About": "projects/meme-generator/about.md"
         # - "Local Build": "projects/meme-generator/localbuild.md"
         # - "Docker": "projects/meme-generator/docker.md"
