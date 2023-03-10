@@ -7,17 +7,17 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Hands on Kubernetes Projects" name="description"/>
 <meta content="Robusta.dev" name="author"/>
-<link href="https://docs.robusta.dev/master/projects/meme-generator/about/" rel="canonical"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
+<link href="https://docs.robusta.dev/master/additionalguides/dockerbuildx/" rel="canonical"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.12" name="generator"/>
-<title>Kubernetes Meme Generator - Hello DevOps Project</title>
-<link href="../../../assets/stylesheets/main.0d440cfe.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<title>Docker buildx - Hello DevOps Project</title>
+<link href="../../assets/stylesheets/main.0d440cfe.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -28,14 +28,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#kubernetes_meme_generator">
+<a class="md-skip" href="#docker_buildx">
           Skip to content
         </a>
 </div>
@@ -43,7 +43,7 @@
 </div>
 <header class="md-header md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Hello DevOps Project" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Hello DevOps Project">
+<a aria-label="Hello DevOps Project" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Hello DevOps Project">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Kubernetes Meme Generator
+              Docker buildx
             
           </span>
 </div>
@@ -124,12 +124,12 @@
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       🏠Home
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../buildpythonlocally/yourfirstproject/">
+<a class="md-tabs__link" href="../../projects/buildpythonlocally/yourfirstproject/">
         🏗️Projects
       </a>
 </li>
@@ -145,7 +145,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Hello DevOps Project" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Hello DevOps Project">
+<a aria-label="Hello DevOps Project" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Hello DevOps Project">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     Hello DevOps Project
@@ -162,7 +162,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         🏠Home
       </a>
 </li>
@@ -179,7 +179,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../buildpythonlocally/yourfirstproject/">
+<a class="md-nav__link" href="../../projects/buildpythonlocally/yourfirstproject/">
         🔥Your First Docker Container
       </a>
 </li>
@@ -195,86 +195,19 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#project_introduction">
-    🏫Project Introduction
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#what_youll_learn">
-    🎯What you'll learn
-  </a>
-<nav aria-label="🎯What you'll learn" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#python">
-    🐍Python
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#docker">
-    🐳Docker
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#kubernetes">
-    ☸️Kubernetes
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#project_outline">
-    🗺️Project Outline
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/robusta-dev/Hello-DevOps-Project/tree/main/docs/projects/meme-generator/about.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/robusta-dev/Hello-DevOps-Project/tree/main/docs/additionalguides/dockerbuildx.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<a class="md-content__button md-icon" href="https://github.com/robusta-dev/Hello-DevOps-Project/tree/main/docs/projects/meme-generator/about.md" title="View source of this page">
+<a class="md-content__button md-icon" href="https://github.com/robusta-dev/Hello-DevOps-Project/tree/main/docs/additionalguides/dockerbuildx.md" title="View source of this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"></path></svg>
 </a>
-<h1 id="kubernetes_meme_generator">Kubernetes Meme Generator<a class="headerlink" href="#kubernetes_meme_generator" title="Permanent link">¶</a></h1>
-<h2 id="project_introduction">🏫Project Introduction<a class="headerlink" href="#project_introduction" title="Permanent link">¶</a></h2>
-<p>This project will help you practice the basic DevOps concepts like containerization, application distribution, Docker and Kubernetes.</p>
-<h2 id="what_youll_learn">🎯What you'll learn<a class="headerlink" href="#what_youll_learn" title="Permanent link">¶</a></h2>
-<h3 id="python">🐍Python<a class="headerlink" href="#python" title="Permanent link">¶</a></h3>
-<ul>
-<li>Setting up a project locally</li>
-</ul>
-<h3 id="docker">🐳Docker<a class="headerlink" href="#docker" title="Permanent link">¶</a></h3>
-<ul>
-<li>Containerize the application</li>
-<li>Creating a Dockerfile</li>
-<li>Building an image</li>
-<li>Running a container</li>
-<li>Exposing ports</li>
-<li>Pushing Docker image to a public registry(DockerHub)</li>
-</ul>
-<h3 id="kubernetes">☸️Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">¶</a></h3>
-<ul>
-<li>Creating and running <strong>Pods</strong></li>
-<li>Port-forwarding</li>
-<li>Creating and using <strong>ReplicaSet</strong></li>
-<li>Creating a <strong>ClusterIP Service</strong></li>
-</ul>
-<h2 id="project_outline">🗺️Project Outline<a class="headerlink" href="#project_outline" title="Permanent link">¶</a></h2>
-<ol>
-<li>Build </li>
-</ol>
+<h1 id="docker_buildx">Docker buildx<a class="headerlink" href="#docker_buildx" title="Permanent link">¶</a></h1>
 </article>
 </div>
 </div>
@@ -312,8 +245,8 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.indexes", "navigation.top", "navigation.pruning", "search.highlight", "search.share", "search.suggest", "content.code.annotate", "content.code.copy", "header.autohide", "announce.dismiss", "toc.follow", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.indexes", "navigation.top", "navigation.pruning", "search.highlight", "search.share", "search.suggest", "content.code.annotate", "content.code.copy", "header.autohide", "announce.dismiss", "toc.follow", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

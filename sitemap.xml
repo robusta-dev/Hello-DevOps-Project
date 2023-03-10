@@ -2,57 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.robusta.dev/master/</loc>
-         <lastmod>2023-02-23</lastmod>
+         <lastmod>2023-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.robusta.dev/master/additionalguides/dockerbuildx/</loc>
+         <lastmod>2023-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.robusta.dev/master/additionalguides/localcluster/</loc>
+         <lastmod>2023-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.robusta.dev/master/additionalguides/virtualenv/</loc>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.robusta.dev/master/projects/projects/</loc>
-         <lastmod>2023-02-23</lastmod>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.robusta.dev/master/projects/another-project/newdoc/</loc>
-         <lastmod>2023-02-23</lastmod>
+         <loc>https://docs.robusta.dev/master/projects/buildpythonlocally/introduction/</loc>
+         <lastmod>2023-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.robusta.dev/master/projects/buildpythonlocally/yourfirstproject/</loc>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.robusta.dev/master/projects/meme-generator/about/</loc>
-         <lastmod>2023-02-23</lastmod>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.robusta.dev/master/projects/meme-generator/docker/</loc>
-         <lastmod>2023-02-23</lastmod>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.robusta.dev/master/projects/meme-generator/kubernetes/</loc>
-         <lastmod>2023-02-23</lastmod>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.robusta.dev/master/projects/meme-generator/localbuild/</loc>
-         <lastmod>2023-02-23</lastmod>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.robusta.dev/master/python/python/</loc>
-         <lastmod>2023-02-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.robusta.dev/master/reference/dockerbuildx/</loc>
-         <lastmod>2023-02-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.robusta.dev/master/reference/localcluster/</loc>
-         <lastmod>2023-02-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.robusta.dev/master/reference/virtualenv/</loc>
-         <lastmod>2023-02-23</lastmod>
+         <lastmod>2023-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
