@@ -6,12 +6,12 @@
 
 Start now!
 
-[Your First Docker Container](https://robusta-dev.github.io/Hello-DevOps-Project/projects/buildpythonlocally/yourfirstproject/)
+[Your First Docker Container🐋](https://robusta-dev.github.io/Hello-DevOps-Project/projects/buildpythonlocally/yourfirstproject/)
 
 ## ✨Coming Soon
 
-[Your First Kubernetes Pod]()
+[Your First Kubernetes Pod](#)
 
-[Your First Kubernetes ReplicaSet]()
+[Your First Kubernetes ReplicaSet](#)
 
 ### by [Robusta.dev](https://home.robusta.dev/)
