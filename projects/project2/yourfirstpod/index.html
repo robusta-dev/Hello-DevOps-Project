@@ -7,12 +7,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Hands on Kubernetes Projects" name="description"/>
 <meta content="Robusta.dev" name="author"/>
-<link href="https://docs.robusta.dev/master/projects/buildpythonlocally/yourfirstproject/" rel="canonical"/>
-<link href="../../.." rel="prev"/>
-<link href="../../project2/yourfirstpod/" rel="next"/>
+<link href="https://docs.robusta.dev/master/projects/project2/yourfirstpod/" rel="canonical"/>
+<link href="../../buildpythonlocally/yourfirstproject/" rel="prev"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.12" name="generator"/>
-<title>🔥Your First Docker Container - Hello DevOps Project</title>
+<title>🔥Your First Kubernetes Pod - Hello DevOps Project</title>
 <link href="../../../assets/stylesheets/main.0d440cfe.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +36,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#your_first_docker_container">
+<a class="md-skip" href="#your_first_kubernetes_pod">
           Skip to content
         </a>
 </div>
@@ -61,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              🔥Your First Docker Container
+              🔥Your First Kubernetes Pod
             
           </span>
 </div>
@@ -131,7 +130,7 @@
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="./">
+<a class="md-tabs__link md-tabs__link--active" href="../../buildpythonlocally/yourfirstproject/">
         🏗️Projects
       </a>
 </li>
@@ -180,14 +179,19 @@
           🏗️Projects
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../buildpythonlocally/yourfirstproject/">
+        🔥Your First Docker Container
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          🔥Your First Docker Container
+          🔥Your First Kubernetes Pod
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        🔥Your First Docker Container
+        🔥Your First Kubernetes Pod
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -211,47 +215,42 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#initial_setup">
-    Initial Setup
+<a class="md-nav__link" href="#create_a_pod_yaml">
+    Create a Pod YAML
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#run_python_application_locally">
-    Run Python application locally
+<a class="md-nav__link" href="#deploy_the_pod">
+    Deploy the Pod
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create_the_dockerfile">
-    Create the Dockerfile
+<a class="md-nav__link" href="#view_the_pod">
+    View the Pod
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#build_the_docker_image">
-    Build the Docker image
+<a class="md-nav__link" href="#access_the_application">
+    Access the application
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#run_the_container">
-    Run the container
+<a class="md-nav__link" href="#delete_the_pod">
+    Delete the Pod
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3_questions_to_check_your_docker_understanding">
-    ❓3 Questions to check your Docker understanding
+<a class="md-nav__link" href="#3_questions_to_check_your_kubernetes_pod_understanding">
+    ❓3 Questions to check your Kubernetes Pod understanding
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3_steps_to_master_dockerfile">
-    🥷3 Steps to master Dockerfile
+<a class="md-nav__link" href="#3_steps_to_master_kubernetes_pod">
+    🥷3 Steps to master Kubernetes Pod
   </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../project2/yourfirstpod/">
-        🔥Your First Kubernetes Pod
-      </a>
 </li>
 </ul>
 </nav>
@@ -286,38 +285,38 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#initial_setup">
-    Initial Setup
+<a class="md-nav__link" href="#create_a_pod_yaml">
+    Create a Pod YAML
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#run_python_application_locally">
-    Run Python application locally
+<a class="md-nav__link" href="#deploy_the_pod">
+    Deploy the Pod
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create_the_dockerfile">
-    Create the Dockerfile
+<a class="md-nav__link" href="#view_the_pod">
+    View the Pod
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#build_the_docker_image">
-    Build the Docker image
+<a class="md-nav__link" href="#access_the_application">
+    Access the application
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#run_the_container">
-    Run the container
+<a class="md-nav__link" href="#delete_the_pod">
+    Delete the Pod
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3_questions_to_check_your_docker_understanding">
-    ❓3 Questions to check your Docker understanding
+<a class="md-nav__link" href="#3_questions_to_check_your_kubernetes_pod_understanding">
+    ❓3 Questions to check your Kubernetes Pod understanding
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3_steps_to_master_dockerfile">
-    🥷3 Steps to master Dockerfile
+<a class="md-nav__link" href="#3_steps_to_master_kubernetes_pod">
+    🥷3 Steps to master Kubernetes Pod
   </a>
 </li>
 </ul>
@@ -327,118 +326,157 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/robusta-dev/Hello-DevOps-Project/tree/main/docs/projects/buildpythonlocally/yourfirstproject.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/robusta-dev/Hello-DevOps-Project/tree/main/docs/projects/project2/yourfirstpod.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<a class="md-content__button md-icon" href="https://github.com/robusta-dev/Hello-DevOps-Project/tree/main/docs/projects/buildpythonlocally/yourfirstproject.md" title="View source of this page">
+<a class="md-content__button md-icon" href="https://github.com/robusta-dev/Hello-DevOps-Project/tree/main/docs/projects/project2/yourfirstpod.md" title="View source of this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"></path></svg>
 </a>
-<h1 id="your_first_docker_container">🔥Your First Docker Container<a class="headerlink" href="#your_first_docker_container" title="Permanent link">¶</a></h1>
-<p>In this project, we will containerize and run an application using Docker. The main goal of using Docker is to make an app portable and reproducible.</p>
+<h1 id="your_first_kubernetes_pod">🔥Your First Kubernetes Pod<a class="headerlink" href="#your_first_kubernetes_pod" title="Permanent link">¶</a></h1>
+<p>In this project, we will deploy a Docker container on Kubernetes. One of the benefits of Kubernetes is that it will make sure your application is running all the time. For example, if your Docker container stops, you have to manually restart it. But with Kubernetes it's done automatically.</p>
 <h2 id="what_youll_learn">🎯 What you'll learn<a class="headerlink" href="#what_youll_learn" title="Permanent link">¶</a></h2>
 <ul>
-<li>Writing a Dockerfile </li>
-<li>Creating your first Docker image</li>
+<li>Writing a Kubernetes Pod YAML.</li>
+<li>Creating your first Pod.</li>
+<li>Port-forwarding the Pod to view your application. </li>
 </ul>
 <h2 id="prerequisites">🛑 Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://docs.docker.com/get-docker/">Docker</a> installed on your machine.</li>
-<li><a href="https://www.python.org/">Python</a> and <a href="https://pip.pypa.io/en/stable/">pip</a> installed. Don't worry, you don't need to know how to code in Python. </li>
+<li>Kubernetes cluster, local or in the cloud. If you want to install a local <strong>k3d</strong> cluster, follow this <a href="https://k3d.io/v5.4.7/#installation">guide</a>.</li>
+<li><a href="https://docs.docker.com/get-docker/">Docker</a> &amp; <a href="https://kubernetes.io/docs/tasks/tools/#kubectl">kubectl</a> installed on your machine.</li>
 </ul>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
-<p>We will use a simple Python application as the base project and containerize it using Docker. This application gets a meme from Reddit and displays it as shown below. </p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/memegeneratorexample.png"><img alt="Meme Generator" src="../images/memegeneratorexample.png"/></a></p>
-<h2 id="initial_setup">Initial Setup<a class="headerlink" href="#initial_setup" title="Permanent link">¶</a></h2>
-<p>Download the repo with our code and switch to <code>hello-devops-project/code/meme-generator/</code>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/robusta-dev/Hello-DevOps-Project.git
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>hello-devops-project/code/meme-generator/
-</code></pre></div></td></tr></table></div></p>
-<h2 id="run_python_application_locally">Run Python application locally<a class="headerlink" href="#run_python_application_locally" title="Permanent link">¶</a></h2>
-<p>Before we jump into containerizing the app, let's see how we can run it locally on your machine. This will help us understand the required steps to run a python app.</p>
-<p>The following commands, install required packages and starts the application. 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
-</code></pre></div></td></tr></table></div></p>
-<p>Navigate to <a href="http://localhost:5000">http://localhost:5000</a> on your browser to see the app exposed on port <code>5000</code>.</p>
-<h2 id="create_the_dockerfile">Create the Dockerfile<a class="headerlink" href="#create_the_dockerfile" title="Permanent link">¶</a></h2>
-<p>A <strong>Dockerfile</strong> contains instructions to containerize an application. In this case, we will write the instructions to build and containerize our python app. </p>
-<p>To do this, we will follow these steps</p>
+<p>To run a container on Kubernetes we use a Pod. A Pod is an abstraction over a container. Each Pod has one main container and one or more helper(side-car) containers.</p>
+<h2 id="create_a_pod_yaml">Create a Pod YAML<a class="headerlink" href="#create_a_pod_yaml" title="Permanent link">¶</a></h2>
+<p>To create an Kubernetes object we write specific instructions. In this case its a Pod. Once you are done, give this file to kubernetes and it takes care of the rest.</p>
 <ol>
-<li>Get a Docker image with python preinstalled
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="l l-Scalar l-Scalar-Plain">FROM python:3.10-slim</span>
-</code></pre></div></td></tr></table></div></li>
-<li>Copy the code from the directory into the Docker image.
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="l l-Scalar l-Scalar-Plain">COPY . .</span>
-</code></pre></div></td></tr></table></div></li>
-<li>Install required packages using pip
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="l l-Scalar l-Scalar-Plain">RUN pip install --no-cache-dir -r requirements.txt</span><span class="w"> </span>
-</code></pre></div></td></tr></table></div></li>
-<li>Give the command that's needs to be run when the container is created. Here we are running <code>main.py</code> file. 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="l l-Scalar l-Scalar-Plain">CMD ["python", "main.py"]</span>
-</code></pre></div></td></tr></table></div></li>
+<li>A Pod is created using the <code>apiVersion</code> <code>v1</code>. </li>
 </ol>
-<p>This is the result of the previous steps. 
-    <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Dockerfile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.10-slim</span><span class="w"> </span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">"python"</span><span class="p">,</span><span class="w"> </span><span class="s2">"main.py"</span><span class="p">]</span>
-</code></pre></div></td></tr></table></div></p>
-<h2 id="build_the_docker_image">Build the Docker image<a class="headerlink" href="#build_the_docker_image" title="Permanent link">¶</a></h2>
-<p>A Docker image is a binary package with your app, dependencies and startup command baked into it.</p>
-<p>Anyone with the Docker image can run your application without any issues.</p>
-<p>Run the following command to build the docker image
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="l l-Scalar l-Scalar-Plain">docker build -t python-app:v1 .</span><span class="w"> </span><span class="c1"># (1)!</span>
-</code></pre></div></td></tr></table></div></p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
+</code></pre></div></td></tr></table></div>
+2. Metadata helps you identify Kubernetes objects. Labels are used to group similar objects. Example: All objects related to the meme app are grouped using the label <code>k8s-memes</code>. </p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">metadata</span><span class="p">:</span><span class="w"> </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meme-app</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s-memes</span>
+</code></pre></div></td></tr></table></div>
+3. Using <code>spec</code> we specify the containers we want to define, what Docker image they use, ports we need to open etc.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nt">containers</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s-meme-app</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pavangudiwada/dockerimage:v1</span><span class="w"> </span><span class="c1"># (1)!</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5000</span><span class="w"> </span><span class="c1"># (2)!</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="c1"># (3)!</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">      </span><span class="nt">requests</span><span class="p">:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"64Mi"</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">"250m"</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">      </span><span class="nt">limits</span><span class="p">:</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"128Mi"</span>
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>
-<p><strong>What are these arguments for?</strong></p>
-<p><code>-t</code> - Used to tag the image, in this case <code>v1</code>. You can create multiple versions of the same image with different tags.</p>
-<p><code>.</code> - The period specifies that the Dockerfile in the current directory be used to build the image. You can also provide a path to the Dockerfile if its in a different location.</p>
+<p>You can add your own Docker image using <code>DockerHubUserName/ImageName:Tag</code></p>
 </li>
-</ol>
-<details class="success">
-<summary>Output</summary>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/dockerbuildoutput.png"><img alt="Docker Build Output" src="../images/dockerbuildoutput.png"/></a></p>
-</details>
-<h2 id="run_the_container">Run the container<a class="headerlink" href="#run_the_container" title="Permanent link">¶</a></h2>
-<p>The image we created is stored on our system. Let's run the image and create your first container
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="l l-Scalar l-Scalar-Plain">docker run -p 5000:5000 python-app:v1</span><span class="w"> </span><span class="c1"># (1)!</span>
-</code></pre></div></td></tr></table></div></p>
-<ol>
 <li>
-<p>What is this argument for?</p>
-<p><code>-p</code> - Lets you specify <code>PortToBeExposed:ContainerPort</code>, in this case <code>5000:5000</code>. </p>
-<p>If you use <code>docker run -p 6000:5000 python-app:v1</code>, you will be able to access the application using <a href="http://localhost:6000">http://localhost:6000</a></p>
+<p>Port the application is to be exposed on and using what protocol.  </p>
+</li>
+<li>
+<p>Define the amount of CPU and memory a pod can use. Learn more about them <a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/">here</a>. Also read <a href="https://home.robusta.dev/blog/stop-using-cpu-limits">"Stop Using CPU Limits"</a> to understand the misconceptions around CPU limits. </p>
 </li>
 </ol>
+<p>This is the result of the previous steps. Save it to a file called <code>first-pod.yaml</code>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">first-pod.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nt">metadata</span><span class="p">:</span><span class="w"> </span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meme-app</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s-memes</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="nt">containers</span><span class="p">:</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s-meme-app</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pavangudiwada/dockerimage:v1</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5000</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">protocol</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="nt">resources</span><span class="p">:</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">      </span><span class="nt">requests</span><span class="p">:</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"64Mi"</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">"250m"</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">      </span><span class="nt">limits</span><span class="p">:</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">"128Mi"</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="deploy_the_pod">Deploy the Pod<a class="headerlink" href="#deploy_the_pod" title="Permanent link">¶</a></h2>
+<p>Next, lets use the Kubernetes Pod YAML to create our Pod. </p>
+<p>Run <code class="highlight"><span class="l l-Scalar l-Scalar-Plain">kubectl apply -f first-pod.yaml</span></code> to create a Pod with all our specifications. </p>
+<h2 id="view_the_pod">View the Pod<a class="headerlink" href="#view_the_pod" title="Permanent link">¶</a></h2>
+<p>The Pod could take a few seconds to start running. You can see this using <code class="highlight"><span class="l l-Scalar l-Scalar-Plain">kubectl get pod meme-app</span></code> </p>
 <details class="success">
 <summary>Output</summary>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/dockerrunoutput.png"><img alt="Docker Run Output" src="../images/dockerrunoutput.png"/></a></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="w"> </span>❯<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>pod<span class="w"> </span>meme-app<span class="w">                                                                  </span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w"> </span>NAME<span class="w">       </span>READY<span class="w">   </span>STATUS<span class="w">    </span>RESTARTS<span class="w">   </span>AGE
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w"> </span>meme-app<span class="w">   </span><span class="m">1</span>/1<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>11s
+</code></pre></div>
 </details>
-<p>Navigate to <a href="http://localhost:5000">http://localhost:5000</a> to see the running app.</p>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>The application ends as soon as you use <code>CTRL+C</code> or close your terminal. If you want the application on the background use <code>docker run -d -p 5000:5000 python-app:v1</code>. </p>
-<p><code>-d</code> - This argument lets you run your container in the background.</p>
+<h2 id="access_the_application">Access the application<a class="headerlink" href="#access_the_application" title="Permanent link">¶</a></h2>
+<p><code>port-forward</code> is a feature to expose any port of a Pod locally. It only works as long as the Pod is running and the terminal is open.</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>kubectl<span class="w"> </span>port-forward<span class="w"> </span>pod/meme-app<span class="w"> </span><span class="m">5000</span>:5000
+</code></pre></div></td></tr></table></div>
+Navigate to <a href="http://localhost:5000">http://localhost:5000</a> to see the running app.</p>
+<details class="success">
+<summary>Output</summary>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../images/memegeneratorexample.png"><img alt="Application running in the Pod" src="../images/memegeneratorexample.png"/></a></p>
 </details>
-<p>Voilà!!🎉 There we have your first Docker container. Well, done.👏</p>
-<h2 id="3_questions_to_check_your_docker_understanding">❓3 Questions to check your Docker understanding<a class="headerlink" href="#3_questions_to_check_your_docker_understanding" title="Permanent link">¶</a></h2>
+<p>Voilà!!🎉 There, we have your first Kubernetes Pod. Well, done.👏</p>
+<h2 id="delete_the_pod">Delete the Pod<a class="headerlink" href="#delete_the_pod" title="Permanent link">¶</a></h2>
+<p>If you no longer need a Pod, you can use <code class="highlight"><span class="l l-Scalar l-Scalar-Plain">kubectl delete -f meme-pod.yaml</span></code>. Alternatively, <code class="highlight"><span class="l l-Scalar l-Scalar-Plain">kubectl delete pod meme-app</span></code> can also be used. </p>
+<h2 id="3_questions_to_check_your_kubernetes_pod_understanding">❓3 Questions to check your Kubernetes Pod understanding<a class="headerlink" href="#3_questions_to_check_your_kubernetes_pod_understanding" title="Permanent link">¶</a></h2>
 <ol>
-<li>If Dockerfile is a cake recipe, the image is a <strong><em>_</em></strong>____.</li>
-<li>In the command <code>docker run -p 8000:5000</code>, <em>8000 refers to <strong><em>_</em></strong>____</em> and <em>5000 refers to <strong><em>_</em></strong>____</em>. </li>
-<li>The point of containerizing an app is <strong><em>_</em></strong>____. </li>
+<li>How do you see which Pods are running?</li>
+<li>What is the difference between a container and a Pod?</li>
+<li>Can you run a container on Kubernetes without a Pod?</li>
 </ol>
-<p><a class="md-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Frobusta-dev.github.io%2FHello-DevOps-Project%2F&amp;text=My%20Answers%20for%20project%201%20of%20%22Hello%20DevOps%20Project%22%20by%20@RobustaDev">Tweet your answers <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.953 4.57a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.936 4.936 0 0 0 4.604 3.417 9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0 0 24 4.59z"></path></svg></span> </a></p>
-<h2 id="3_steps_to_master_dockerfile">🥷3 Steps to master Dockerfile<a class="headerlink" href="#3_steps_to_master_dockerfile" title="Permanent link">¶</a></h2>
+<h2 id="3_steps_to_master_kubernetes_pod">🥷3 Steps to master Kubernetes Pod<a class="headerlink" href="#3_steps_to_master_kubernetes_pod" title="Permanent link">¶</a></h2>
 <ol>
-<li>Redo the exercise.</li>
-<li>Deploy a similar app using <a href="https://docs.docker.com/language/python/build-images/">this guide</a> from Docker docs.</li>
-<li>Containerize <a href="https://github.com/darkmavis1980/flask-python-3-docker">this</a> application. </li>
+<li>Create a Pod using <a href="https://hub.docker.com/r/pavangudiwada/reactapp">this</a> Docker image and expose port <code>3000</code>.</li>
+<li>Follow <a href="https://kubernetes.io/docs/concepts/workloads/pods/">this</a> guide by Kubernetes to understand Pods in depth. </li>
+<li>Read about <code>kubectl create</code> command. </li>
 </ol>
 </article>
 </div>
