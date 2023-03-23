@@ -108,6 +108,10 @@ kubectl port-forward pod/meme-app 5000:5000
 ```
 Navigate to [http://localhost:5000](http://localhost:5000) to see the running app.
 
+??? success "Output"
+
+    ![Application running in the Pod](./images/memegeneratorexample.png)
+
 Voilà!!🎉 There, we have your first Kubernetes Pod. Well, done.👏
 
 ## Delete the Pod
